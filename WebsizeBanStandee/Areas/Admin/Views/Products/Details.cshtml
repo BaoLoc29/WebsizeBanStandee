@@ -1,0 +1,54 @@
+﻿@model WebsizeBanStandee.Context.Product
+
+@{
+    ViewBag.Title = "CHI TIẾT";
+    Layout = "~/Areas/Admin/Views/Shared/layout-admin.cshtml";
+}
+
+<h2>CHI TIẾT</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Sản Phẩm :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePro)
+        </dd>
+
+        <dt>
+            Mô Tả :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DecriptionPro)
+        </dd>
+
+        <dt>
+            Đơn Giá :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            Loại Sản Phẩm :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.NameCate)
+        </dd>
+
+        <dt>
+            Hình Ảnh Sản Phẩm :
+        </dt>
+
+        <dd>
+            <img src="~/@Model.ImagePro" width="200" height="200" />
+        </dd>
+    </dl>
+</div>
+<a href="/Admin/Products/Index" class="btn btn-danger">Trở về</a>

@@ -1,0 +1,69 @@
+﻿@model WebsizeBanStandee.Context.Product
+@{
+    ViewBag.Title = "Detail";
+}
+
+@*<style>
+    .padding-y {
+        padding-top: 160px;
+        padding-bottom: 20px
+    }
+</style>*@
+
+<section class="section-content bg-white padding-y">
+    <div class="container">
+
+        <div class="row">
+            <aside class="col-md-6">
+                <div class="card">
+                    <article class="gallery-wrap">
+                        <div class="img-big-wrap">
+                            <div> <a href="#"><img src="~/@Model.ImagePro"></a></div>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+            <main class="col-md-6">
+                <article class="product-info-aside">
+                    <h2 class="title mt-3">@Model.NamePro</h2>
+
+                    <p class="mb-3">
+                        <span class="tag"> <i class="fa fa-check"></i> Hàng chính hãng</span>
+                        <span class="tag"> Đã bán 13.7k </span>
+                        <span class="tag"> 8k Viewer </span>
+                        <span class="tag"> Giá tốt </span>
+                    </p>
+
+                    @*<div class="rating-wrap my-3">
+                        <small class="label-rating text-muted">19.7k reviews</small>
+                        <small class="label-rating text-success"> <i class="fa fa-clipboard-check"></i> 13.2k orders </small>
+                    </div>*@
+
+                    <p>
+                        Quảng cáo ngoài trời là một cách tuyệt vời để thu hút khách hàng quanh năm. <br />
+                        <br />
+                        Với các kệ trưng bày chống chịu thời tiết và bảng hiệu in của chúng tôi, thông điệp của bạn sẽ nổi bật bên vệ đường, bên ngoài cơ sở kinh doanh hoặc tại một lễ hội, triển lãm sự kiện ngoài trời khác.<br />
+                        <br />
+                        Với đa dạng sản phẩm từ standee chân sắt khung nhôm cao cấp, standee X đế nước chống gió, quầy hàng di động, hay backdrop di động cho một sân khấu lắp đặt chỉ 15p. <br />
+                    </p>
+                    <p>@Model.DecriptionPro</p>
+
+                    <div class="price-wrap">
+                        @{int price = (int)Model.Price;}
+                        <span class="h2 price">Giá: @price.ToString("#,##0").Replace(',', '.')</span>
+                        <small class="text-muted">/Cái</small>
+                    </div>
+
+                    <div class="form-row  mt-4">
+                        <div class="form-group col-md">
+                            <a href="/ShoppingCart/AddToCart/@Model.ProductID" id="addtocart" class="btn  btn-primary">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="text">Thêm vào giỏ hàng</span>
+                            </a>
+                        </div> <!-- col.// -->
+                    </div> <!-- row.// -->
+                </article>
+            </main>
+        </div>
+    </div>
+</section>

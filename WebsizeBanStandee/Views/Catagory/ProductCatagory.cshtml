@@ -1,0 +1,104 @@
+﻿@model List<WebsizeBanStandee.Context.Product>
+@{
+    ViewBag.Title = "ProductCatagory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .padding-y {
+        padding-top: 20px;
+    }
+</style>
+<section class="section-content padding-y">
+    <div class="container">
+        @foreach (var item in Model.Take(1))
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <ol class="breadcrumb float-left">
+                        <li class="breadcrumb-item"><a href="http://localhost:65054/">HOME</a></li>
+                        <li class="breadcrumb-item active">DANH MỤC SẢN PHẨM</li>
+                        <li class="breadcrumb-item">@item.Category.NameCate</li>
+                    </ol>
+                </div>
+            </div>
+        }
+
+
+        <div class="row">
+            <aside class="col-md-2">
+                <article class="filter-group">
+                    <h6 class="title">
+                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_3"> Mức giá </a>
+                    </h6>
+                    <div class="filter-content collapse show" id="collapse_3">
+                        <div class="inner">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Từ</label>
+                                    <input class="form-control" placeholder="VND" type="number">
+                                </div>
+                                <div class="form-group text-right col-md-6">
+                                    <label>Đến</label>
+                                    <input class="form-control" placeholder="VND" type="number">
+                                </div>
+                            </div>
+                            <button class="btn btn-block btn-primary">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </article>
+
+            </aside>
+            <main class="col-md-10">
+
+                @foreach (var item in Model)
+                {
+                    int price = (int)item.Price;
+                    <article class="card card-product-list">
+                        <div class="row no-gutters">
+                            <aside class="col-md-3">
+                                <a href="@Url.Action("Detail", "Product", new {ProductID = item.ProductID})" class="img-wrap">
+                                    <span class="badge badge-danger"> NEW </span>
+                                    <img src="~/@item.ImagePro">
+                                </a>
+                            </aside>
+                            <div class="col-md-6">
+                                <div class="info-main">
+                                    <a href="@Url.Action("Detail", "Product", new {ProductID = item.ProductID})" class="h5 title">@item.NamePro</a>
+                                    <p class="mb-3">
+                                        <span class="tag"> <i class="fa fa-check"></i> Hàng chính hãng</span>
+                                        <span class="tag"> Đã bán 13.7k </span>
+                                        <span class="tag"> 80 Lượt xem </span>
+                                    </p>
+                                    <p>
+                                        @item.DecriptionPro
+                                    </p>
+                                    <div class="price-wrap">
+                                        <br />
+                                        <span class="h5 price">Giá: @price.ToString("#,##0").Replace(',', '.')</span>
+                                        <small class="text-muted">/Cái</small>
+                                        @*<span class="h5 price">Giá: @item.Price</span>
+                                        <small class="text-muted">/cái</small>*@
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <a href="/ShoppingCart/AddToCart/@item.ProductID" class="btn btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                }
+                <nav class="mb-4" aria-label="Page navigation sample">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+</section>

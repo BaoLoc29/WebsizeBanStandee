@@ -1,0 +1,20 @@
+﻿@*<span style="color:white; margin-left: 2px">
+    <a class="btn btn-dark" href="/ShoppingCart/ShowCart" style="font-weight:200;">
+        <span class="glyphicon"></span> Giỏ Hàng
+    </a>
+    Tổng Tiền :<b>@ViewBag.TotalCart.ToString("#,##0").Replace(',', '.') đồng</b>
+</span>*@
+
+
+<div class="widget-header">
+    <a href="/ShoppingCart/ShowCart" class="widget-view">
+        <div class="icon-area">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="notify">
+                @ViewBag.TotalCart.ToString("#,##0").Replace(',', '.')đ
+            </span>
+        </div>
+        <small class="text"> Giỏ Hàng </small>
+    </a>
+</div>
+

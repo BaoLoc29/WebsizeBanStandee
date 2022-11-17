@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsizeBanStandee", "WebsizeBanStandee\WebsizeBanStandee.csproj", "{84B16957-3111-4649-8EF6-66330FB29F15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84B16957-3111-4649-8EF6-66330FB29F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B16957-3111-4649-8EF6-66330FB29F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B16957-3111-4649-8EF6-66330FB29F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B16957-3111-4649-8EF6-66330FB29F15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21C3E556-F654-4C9F-8E5B-CD97B4445695}
+	EndGlobalSection
+EndGlobal

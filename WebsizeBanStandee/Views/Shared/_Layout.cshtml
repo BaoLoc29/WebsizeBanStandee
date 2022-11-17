@@ -1,0 +1,220 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=604800" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CONTROL A DISPLAY - BẠN ĐỒNG HÀNH TRÊN MỌI CHƯƠNG TRÌNH QUẢNG CÁO</title>
+
+    <link href="~/Content/images/Logo.ico" rel="shortcut icon" type="image/x-icon">
+
+    <script src="~/Content/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <script src="~/Content/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <link href="~/Content/css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/js/script.js"></script>
+
+    @*<style>
+            .section-header {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+            }
+        </style>*@
+</head>
+<body>
+
+    <header class="section-header">
+        <section class="header-main border-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-xl-3 col-lg-3 col-md-3" style="padding-left:35px">
+                        <a href="http://localhost:65054/" class="brand-wrap">
+                            <img src="~/Content/images/LogoControlA.png" />
+                        </a>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-3 col-md-1" style="padding-right:37px">
+                        <form action="#" class="search-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-append" >
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-search"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-3" style="padding-left:100px">
+                        <div class="widgets-wrap">
+                            <div class="widget-header">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        @Html.Action("BagCart", "ShoppingCart")
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="widget-header">
+                                <a href="http://localhost:65054/Admin/Products" class="widget-view">
+                                    <div class="icon-area">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <small class="text"> Đăng nhập </small>
+                                </a>
+                            </div>
+
+                            <!--<div class="col-xl-4 col-lg-4 col-md-2" style="padding-left: 200px">
+                            <div class="widgets-wrap">
+                                <div class="widget-header">
+                                    <a href="#" class="widget-view">
+                                        <div class="icon-area">
+                                            <i class="fa fa-user"></i>
+                                            <span class="notify">3</span>
+                                        </div>
+                                        <small class="text"> User </small>
+                                    </a>
+                                </div>-->
+                            @*<div class="widget-header">
+                                    <a href="#" class="widget-view">
+                                        <div class="icon-area">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span class="notify">3</span>
+                                        </div>
+                                        <small class="text"> Giỏ Hàng </small>
+                                    </a>
+                                </div>*@
+                            <!--</div>
+
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <nav class="navbar navbar-main navbar-expand-lg border-bottom">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main_nav" style="padding-left:200px">
+                    <ul class="navbar-nav">
+                        @*TRƯNG BÀY NGOÀI TRỜI*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">TRƯNG BÀY NGOÀI TRỜI </a>
+                            <div class="dropdown-menu" style="text-align:center">
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=1">BOOTH SAMPLING</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=2">KỆ CHỈ DẪN LỐI ĐI</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=4">STANDEE NGOÀI TRỜI</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=5">BACKDROP DI ĐỘNG</a>
+                            </div>
+                        </li>
+
+                        @*TRƯNG BÀY TRONG NHÀ*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">TRƯNG BÀY TRONG NHÀ </a>
+                            <div class="dropdown-menu" style="text-align:center">
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=6">CHÂN STANDEE CHỮ X</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=7">GIÁ ĐỠ TÀI LIỆU</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=8">STANDEE HỘP CUỐN</a>
+                                <a class="dropdown-item" href="http://localhost:65054/Catagory/ProductCatagory?IDCate=3">STANDEE TRONG NHÀ KHÁC</a>
+                            </div>
+                        </li>
+                        @*Liên hệ*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LIÊN HỆ</a>
+                        </li>
+
+                        @*VIDEO*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">VIDEO</a>
+                        </li>
+
+                        @*CHẾ ĐỘ BẢO HÀNH*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CHẾ ĐỘ BẢO HÀNH</a>
+                        </li>
+
+                        @*HƯỚNG DẪN LẮP ĐẶT*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HƯỚNG DẪN LẮP ĐẶT</a>
+                        </li>
+                    </ul>
+                </div> <!-- collapse .// -->
+            </div> <!-- container .// -->
+        </nav>
+    </header> <!-- section-header.// -->
+    @RenderBody()
+
+
+    <footer class="section-footer bg-secondary">
+        <div class="container">
+            <section class="footer-top padding-y-lg text-white">
+                <div class="row">
+                    <aside class="col-md col-6">
+                        <h6 class="title">DANH MỤC SẢN PHẨM</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=1">BOOTH SAMPLING</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=2">KỆ CHỈ DẪN LỐI ĐI</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=3">STANDEE TRONG NHÀ KHÁC</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=4">STANDEE NGOÀI TRỜI</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=5">BACKDROP DI ĐỘNG</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=6">CHÂN STANDEE CHỮ X</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=7">GIÁ ĐỠ TÀI LIỆU</a></li>
+                            <li><a href="http://localhost:65054/Catagory/ProductCatagory?IDCate=8">STANDEE HỘP CUỐN</a></li>
+                        </ul>
+                    </aside>
+                    <aside class="col-md col-6">
+                        <h6 class="title">LIÊN KẾT HỮU ÍCH</h6>
+                        <ul class="list-unstyled">
+                            <li> <a href="#">Liên hệ</a></li>
+                            <li> <a href="#">Giới thiệu</a></li>
+                            <li> <a href="#">Chính sách đổi trả</a></li>
+                            <li> <a href="#">Điều khoản dịch vụ</a></li>
+                            <li> <a href="#">Chính sách bảo mật thông tin</a></li>
+                            <li> <a href="#">Hình thức thanh toán khi mua hàng</a></li>
+                            <li> <a href="#">Chính sách vận chuyển</a></li>
+                            <li><img src="~/Content/images/logoSaleNoti.png" style="width:160px" /></li>
+                        </ul>
+                    </aside>
+
+                    <aside class="col-md col-2" style="padding-right:70px">
+                        <h6 class="title">ĐỊA CHỈ</h6>
+                        <ul class="list-unstyled" style="margin-right:10px">
+                            <li>Địa Chỉ: 31 đường số 11, Phường Bình Trưng Đông, thành phố Thủ Đức, thành phố Hồ Chí Minh</li>
+                            <li class="col-md-6 col-xs-12 text-left ftz-15" style="margin-bottom: 20px;" id="company-address-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3426183570073!2d106.7762505142971!3d10.7850492619848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175268274273ad7%3A0x159a291bcbea7d82!2zMzEgxJDGsOG7nW5nIHPhu5EgMTEsIELDrG5oIFRyxrBuZyDEkMO0bmcsIFF14bqtbiAyLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1653828457211!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </li>
+                        </ul>
+                    </aside>
+                </div> <!-- row.// -->
+            </section>	<!-- footer-top.// -->
+
+            <section class="footer-bottom text-center">
+
+                <p class="text-white">Bản quyền thuộc về CONTROL A DISPLAY Cung cấp bởi Standee</p>
+                <p class="text-muted"> &copy; @DateTime.Now.Year - Khóa 2021 - K27</p>
+                <br>
+            </section>
+        </div><!-- //container -->
+    </footer>
+    <!-- ========================= FOOTER END // ========================= -->
+</body>
+</html>

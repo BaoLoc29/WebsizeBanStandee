@@ -1,0 +1,65 @@
+﻿@model WebsizeBanStandee.Context.Product
+@{
+    ViewBag.Title = "XÓA SẢN PHẨM";
+    Layout = "~/Areas/Admin/Views/Shared/layout-admin.cshtml";
+    <title>Xóa sản phẩm khỏi gian hàng</title>
+}
+
+<h2>XÓA SẢN PHẨM</h2>
+
+<h3>Bạn có chắc là xóa Sản Phẩm này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Sản Phẩm :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePro)
+        </dd>
+
+        <dt>
+            Mô tả ngắn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DecriptionPro)
+        </dd>
+
+        <dt>
+            Đơn giá sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            Loại sản phẩm :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.NameCate)
+        </dd>
+
+        <dt>
+            Hình ảnh sản phẩm :
+        </dt>
+
+        <dd>
+            <img src="~/@Model.ImagePro" width="200" height="200" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-Bas" /> |
+            <a href="/Admin/Products/Index" class="btn btn-danger">Trở về</a>
+        </div>
+    }
+</div>

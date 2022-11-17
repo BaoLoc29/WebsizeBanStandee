@@ -1,0 +1,32 @@
+﻿@model WebsizeBanStandee.Context.Category
+
+@{
+    ViewBag.Title = "XÓA LOẠI SẢN PHẨM";
+    Layout = "~/Areas/Admin/Views/Shared/layout-admin.cshtml";
+}
+<h2>XÓA LOẠI SẢN PHẨM</h2>
+
+<h3>Bạn có chắc muốn xóa loại sản phẩm này không?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Loại :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-Bas" /> |
+            <a href="/Admin/Categories/Index" class="btn btn-danger">Trở về</a>
+        </div>
+    }
+</div>
